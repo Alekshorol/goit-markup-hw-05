@@ -20,6 +20,7 @@
   --social-color: rgba(175, 177, 184, 1);
   --background-social-footer: rgba(255, 255, 255, 0.1);
   --color-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --cards-background-color: rgba(33, 150, 243, 0.9);
 }
 
 /* utilite */
@@ -202,6 +203,23 @@ body {
 
 .site-nav .link.current {
   color: var(--title-text-color);
+}
+
+.current {
+  color: var(--title-text-color);
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  background: #2196F3;
+
 }
 
 /* auth-nav */
@@ -586,6 +604,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .card-images::before {
@@ -594,8 +613,9 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+  background-color: var(--cards-background-color);
+  transform: translateY(100%);
+  transition: transform var(--color-transition);
 }
 
 .text-card {
@@ -608,16 +628,17 @@ body {
   line-height: 1.56;
 
   color: var(--white-color);
-  opacity: 0;
+  transform: translateY(100%);
+  transition: transform var(--color-transition);
 }
 .cards-link:hover .card-images::before,
 .cards-link:hover .text-card {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 .cards-link:focus .card-images::before,
 .cards-link:focus .text-card {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 /* card */
