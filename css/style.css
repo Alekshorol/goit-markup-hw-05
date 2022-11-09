@@ -698,6 +698,10 @@ body {
   height: 100%;
 
   background-color: var(--backdrop-background);
+
+  opacity: 1;
+
+  transition: opacity var(--color-transition);
 }
 
 .backdrop.is-hidden {
