@@ -619,7 +619,6 @@ body {
 .cards-link:focus,
 .cards-link:hover {
   box-shadow: var(--shadov-color-team);
- 
 }
 
 .card-images {
@@ -715,5 +714,4 @@ body {
 
   background-color: var(--white-color);
   position: absolute;
-
 }
