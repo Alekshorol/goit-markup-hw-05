@@ -59,7 +59,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button type="button" class="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- секция достоинства -->
@@ -124,7 +124,9 @@
           <ul class="work-title-list">
             <li class="work-list list">
               <img src="./images/img1.jpg" alt="робота з пк" width="370" />
-              <button class="work-discription">Десктопні додатки</button>
+              <button type="button" href="#" class="work-discription">
+                Десктопні додатки
+              </button>
             </li>
             <li class="work-list list">
               <img
@@ -132,7 +134,9 @@
                 alt="робота з телефоном"
                 width="370"
               />
-              <button class="work-discription">Мобільні додатки</button>
+              <button type="button" href="#" class="work-discription">
+                Мобільні додатки
+              </button>
             </li>
             <li class="work-list list">
               <img
@@ -140,7 +144,9 @@
                 alt="робота з планшетом"
                 width="370"
               />
-              <button class="work-discription">Дизайнерські рішення</button>
+              <button type="button" href="#" class="work-discription">
+                Дизайнерські рішення
+              </button>
             </li>
           </ul>
         </div>
@@ -564,5 +570,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close>закрыть</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
