@@ -741,6 +741,11 @@ body {
 
 .button-modal-close {
   position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   top: 8px;
   right: 8px;
 
@@ -754,8 +759,5 @@ body {
 }
 
 .closes {
-  width: 11px;
-  height: 11px;
-  align-items: center;
-  justify-content: center;
+  fill: var(--studio-color);
 }
